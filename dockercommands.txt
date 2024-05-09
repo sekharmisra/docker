@@ -1,0 +1,15 @@
+docker ps --List down list of running containers 
+docekr images -- List down all local images available for running containers
+docker pull docker pull nginx:1.25.5-perl -- Pull command for image
+docker run nginx:1.25.5-bookworm-perl --Pull and run in the same command 
+docker run -d nginx:1.25.5-bookworm-perl -- To run docker in detached mode in terminal
+docker logs 327e4b06ca7a --get docker logs with container id
+docker stop 327e4b06ca7a --to stop container using container id
+docker ps -a --list of all containers stopped as well as running
+docker start 1e8dc9e960fb --starting container with container id
+docker stop 1e8dc9e960fb 3945bb373042 --stopping multiple containers at once
+docker run --name sekharnginx -d -p 9900:80 nginx:1.25.5 --running docker with name 
+docker logs sekharnginx --getting logs with docker name
+docker build -t sekhar-node-app:2.20 . --Docker command to build docker file . in the end specifies the docker file directory
+docker run --name sekhar-node-server -d -p 7000:80 sekhar-node-app:2.20 -- custom image build using local server
+docker run --name sekhar-node-app-server -d -p 3000:8000 sekhar-node-app:2.20
